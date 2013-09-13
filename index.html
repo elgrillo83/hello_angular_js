@@ -21,6 +21,12 @@
         {{label}}
       </option>
     </select>
+
+    <h3>Filtering Data</h3>
+    <input type='text' ng-model='searchText' />
+    <ul>
+      <li ng-repeat='person in people | filter:searchText'>#{{person.id}} {{person.name}}</li>
+    </ul>
   </div>
 </body>
 </html>
